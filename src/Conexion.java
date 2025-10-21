@@ -1,6 +1,3 @@
-package com.mycompany.doparcial;
-
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import javax.swing.JOptionPane;

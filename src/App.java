@@ -2,8 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.doparcial;
-
 import javax.swing.JOptionPane;
 
 /**
@@ -13,7 +11,7 @@ import javax.swing.JOptionPane;
 public class App {
 
     public static void main(String[] args) {
-        VentanaLogin vent = new VentanaLogin();
+        VentLogin vent = new VentLogin();
         vent.setVisible(true);
         if( Conexion.GetConnection()!= null)
             
