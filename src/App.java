@@ -12,9 +12,9 @@ public class App {
 
     public static void main(String[] args) {
         VentLogin vent = new VentLogin();
+        VentanaPrincipal ventPrincipal = new VentanaPrincipal();
         vent.setVisible(true);
         if( Conexion.GetConnection()!= null)
-            
-          JOptionPane.showMessageDialog(null,  "conectado!!!");
+            JOptionPane.showMessageDialog(null,  "conectado!!!");
     }
 }

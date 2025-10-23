@@ -15,19 +15,25 @@ import java.sql.PreparedStatement;
 public class Login extends VentLogin {
     
     
-    public void login1(){
+    public boolean login1(){
         Connection con = null;
+        boolean log=false;
+        String rslog="";
         
         String sql = "Select clientes.password from clientes where clientes.usuario="+getName();
         try {
             con=Conexion.GetConnection();
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
+            rslog=rs.getString("password");
         }
         catch (SQLException e){
             System.out.println("Error");
         }
-        
-        
+
+        if (rslog==getPass()){
+            log=true;
+        }
+        return log;
     }
 }
